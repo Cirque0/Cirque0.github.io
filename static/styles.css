@@ -1,5 +1,13 @@
-#logo {
-    width: 250px;
+@media (min-width: 576px) {
+    #logo {
+        width: 250px;
+    }
+}
+
+@media (max-width: 576px) {
+    #logo {
+        width: 200px;
+    }
 }
 
 #wrapper {
@@ -12,15 +20,15 @@
     font-size: 28px;
 }
 
-#navList li > div {
-    margin-left: 25px;
+#navList li > a {
+    margin-left: 30px;
 }
 
-#navitem {
+#navlinkstl {
     color: black;
 }
 
-#navitem:hover {
+#navlinkstl:hover {
     color: black;
     text-decoration: none;
 }

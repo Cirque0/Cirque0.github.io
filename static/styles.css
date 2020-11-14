@@ -2,17 +2,23 @@
     #logo {
         width: 250px;
     }
-}
 
-@media (max-width: 575px) {
-    #logo {
-        width: 150px;
+    #wrapper {
+        padding: 0.5in;
     }
 }
 
-#wrapper {
-    padding: 0.5in;
+@media (max-width: 576px) {
+    #logo {
+        width: 200px;
+    }
+
+    #wrapper {
+        padding: 0.25in;
+    }
 }
+
+
 
 #navList li{
     font-family: 'Arial Narrow';

@@ -5,10 +5,12 @@
 
     #wrapper {
         padding: 0.5in;
+        padding-bottom: 0in;
     }
 
     #gallery {
         padding: 00.5in;
+        padding-top: 0.25in;
     }
 
     #gallery > img {

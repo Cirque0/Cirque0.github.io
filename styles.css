@@ -1,5 +1,6 @@
 div.bezel {
     background-color: rgb(44, 59, 82);
+    border: solid 5px black;
     height: 100vh;
     padding: 0.6in;
 }

@@ -5,15 +5,30 @@ div.bezel {
 }
 
 div.screen {
+    position: relative;
     background-color: white;
     background-image: url("wallpaper3.jpg");
     background-size: 1430px;
     background-position: 50% 45%;
     height: 85vh;
     border-radius: 5px;
+    border: solid 5px black;
 }
 
-img.wallpaper {
-    height: 90vh;
-    margin: auto;
+
+div.taskbar {
+    background-color: rgba(195, 255, 211, 0.692);
+    backdrop-filter: blur(10px);
+    overflow: hidden;
+    position: absolute;
+    bottom: -1px;
+    width: 100%;
+    height: 50px;
+    padding: 1px;
+    padding-left: 6px;
+}
+
+img.icon {
+    width: 48px;
+    margin-right: 8px;
 }

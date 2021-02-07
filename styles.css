@@ -6,7 +6,7 @@ div.bezel {
 
 div.screen {
     position: relative;
-    background-color: white;
+    background-color: rgb(255, 179, 129);
     background-image: url("wallpaper3.jpg");
     background-size: 1430px;
     background-position: 50% 45%;

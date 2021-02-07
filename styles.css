@@ -1,0 +1,19 @@
+div.bezel {
+    background-color: rgb(44, 59, 82);
+    height: 100vh;
+    padding: 0.6in;
+}
+
+div.screen {
+    background-color: white;
+    background-image: url("wallpaper3.jpg");
+    background-size: 1430px;
+    background-position: 50% 45%;
+    height: 85vh;
+    border-radius: 5px;
+}
+
+img.wallpaper {
+    height: 90vh;
+    margin: auto;
+}

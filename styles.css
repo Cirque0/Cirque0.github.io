@@ -29,7 +29,51 @@ div.taskbar {
     padding-left: 6px;
 }
 
+div.vscode {
+    background-color: #222A38;
+    width: 700px;
+    height: 500px;
+    position: absolute;
+    top: 30px;
+    left: 50px;
+    
+}
+
+div.vscodehead {
+    background-color: #1D232F;
+    height: 30px;
+    text-align: right;
+}
+
+div.chrome {
+    background-color: white;
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    top: 60px;
+    left: 850px;
+    display: inline-flex;
+}
+
+div.chromehead {
+    background-color: rgba(128, 170, 140, 0.993);
+    height: 30px;
+    width: 500px;
+    text-align: right;
+}
+
 img.icon {
     width: 48px;
     margin-right: 8px;
+}
+
+p.windowheader {
+    color: whitesmoke;
+    text-align: center;
+    display: inline-block;
+}
+
+p.code {
+    color: whitesmoke;
+    text-align: justify
 }

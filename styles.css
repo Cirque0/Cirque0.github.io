@@ -14,6 +14,7 @@ div.screen {
     height: 85vh;
     border-radius: 5px;
     border: solid 5px black;
+
 }
 
 
@@ -36,7 +37,7 @@ div.vscode {
     position: absolute;
     top: 30px;
     left: 50px;
-    
+
 }
 
 div.vscodehead {
@@ -52,7 +53,6 @@ div.chrome {
     position: absolute;
     top: 60px;
     left: 850px;
-    display: inline-flex;
 }
 
 div.chromehead {
@@ -76,4 +76,26 @@ p.windowheader {
 p.code {
     color: whitesmoke;
     text-align: justify
+}
+
+#googlelogo {
+    position: relative;
+    left: 125px;
+    top: 100px;
+}
+
+#searchbar {
+    position: relative;
+    left: 125px;
+    top: 110px;
+    border: 2px solid black;
+    border-radius: 30px;
+    width: 275px;
+    height: 50px;
+    padding: 10px;
+    padding-left: 15px;
+}
+
+#code {
+    display: none;
 }

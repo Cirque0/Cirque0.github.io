@@ -11,7 +11,7 @@
     <body>
         <div class="bezel">
             <div class="screen">
-                <button onclick="typeWriter()" class="startbutton">START CODING</button>
+                <button onclick="typeWriter()" id="startbutton" class="startbutton">START CODING</button>
                 <div class="taskbar">
                     <img src="windowsicon.png" class="icon">
                     <img src="fileexplorericon.png" class="icon" style="width: 40px;">
@@ -19,7 +19,7 @@
                     <img src="vscodeicon.png" class="icon" style="width: 40px;">
                 </div>
 
-                <div class="vscode">
+                <div class="vscode" id="vscode">
                     <div class="vscodehead">
                         <p class="windowheader" style="margin-right: 1.5in;">Visual Studio Code - animations.js</p>
                         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="white" class="bi bi-dash" viewBox="0 0 16 16">
@@ -39,15 +39,15 @@
                             var speed = 50;<br>
                             <br>
                             function typeWriter() {<br>
-                                if (i < txt.length) {<br>
-                                    document.getElementById("demo").innerHTML += txt.charAt(i);<br>
-                                    i++;<br>
-                                    setTimeout(typeWriter, speed);<br>
-                                }<br>
-                            }<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;if (i < txt.length) {<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;document.getElementById("demo").innerHTML += txt.charAt(i);<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;i++;<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;setTimeout(typeWriter, speed);<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;};<br>
+                            };<br>
                         </p>
                     </div>
-                    <span id="typed" style="color: white;"></span>
+                    <span id="typed" style="color: rgb(212, 212, 212);"></span>
                 </div>
 
                 <div class="chrome">
@@ -95,17 +95,23 @@
             </div>
         </div>
         <script>
-            function typeWriter() {
-                document.getElementsByClassName('startbutton').style.display = 'none';
-                document.getElementsByClassName('vscode').style.display = 'initial';
+            $('document').ready(anima());
+
+            function anima() {
+                document.getElementById('startbutton').style.display = 'none';
+                setTimeout(function() {document.getElementById('vscode').style.display = 'initial';}, 500);
                 var options = {
                     stringsElement: "#code",
-                    typeSpeed: 25,
+                    typeSpeed: 2,
                     showCursor: true,
                     cursorChar: '|',
+                    autoInserCss: true,
                 };
 
-                var typed = new Typed('#typed', options);
+                setTimeout(function() {var typed = new Typed('#typed', options);}, 2000)
+
+                setTimeout(function() {document.getElementById('debugwin').style.display = 'initial';}, 9000);
+
             };
                 
         </script>

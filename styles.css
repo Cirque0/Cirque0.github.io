@@ -37,7 +37,8 @@ div.vscode {
     position: absolute;
     top: 30px;
     left: 50px;
-
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    display: none;
 }
 
 div.vscodehead {
@@ -53,6 +54,8 @@ div.chrome {
     position: absolute;
     top: 60px;
     left: 850px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    display: none;
 }
 
 div.chromehead {
@@ -60,6 +63,24 @@ div.chromehead {
     height: 30px;
     width: 500px;
     text-align: right;
+}
+
+div#debugwin {
+    height: 200px;
+    width: 200px;
+    background-color: #222A38;
+    position: absolute;
+    top: 200px;
+    left: 400px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.13);
+    display: none;
+}
+
+div#debugwinhead {
+    background-color: #1D232F;
+    height: 30px;
+    text-align: right;
+    
 }
 
 img.icon {
@@ -98,4 +119,22 @@ p.code {
 
 #code {
     display: none;
+}
+
+.yesno {
+    margin-left: 40px;
+    color: white;
+    text-decoration: none;
+}
+
+.yesno:hover {
+    color: white;
+}
+
+.startbutton {
+    background-color: rgba(255, 255, 255, 0.219);
+    font-size: 50px;
+    position: absolute;
+    top: 50%;
+    left: 35%;
 }

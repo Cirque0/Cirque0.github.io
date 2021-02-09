@@ -79,8 +79,6 @@ div#debugwin {
 div#debugwinhead {
     background-color: #1D232F;
     height: 30px;
-    text-align: right;
-    
 }
 
 img.icon {
@@ -122,9 +120,12 @@ p.code {
 }
 
 .yesno {
-    margin-left: 40px;
+    margin-left: 30px;
     color: white;
     text-decoration: none;
+    border: 2px solid rgb(133, 133, 133);
+    border-radius: 5px;
+    padding: 5px;
 }
 
 .yesno:hover {

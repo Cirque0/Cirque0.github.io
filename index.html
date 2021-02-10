@@ -72,7 +72,7 @@
                     </div>
                 </div>
 
-                <div id="debugwin">
+                <div class="popup" id="debugwin">
                     <div id="debugwinhead">
                         <p class="windowheader" style="margin-left: 5px;">Debug</p>
                     </div>
@@ -81,6 +81,52 @@
                     <div style="margin-left: 20px;">
                         <a class="yesno" id="yes">Yes</a>
                         <a class="yesno" id="no">No</a>
+                    </div>
+                </div>
+
+                <div class="popup" id="giveup">
+                    <div id="debugwinhead">
+
+                    </div>
+                    <p style="margin: 20px; color: red;">Are you really sure you want to give up?</p>
+                    <p style="margin-left: 20px; margin-top: 20px; color: white;"></p>
+                    <div style="margin-left: 20px;">
+                        <a class="yesno" id="yesgive">Yes</a>
+                        <a class="yesno" id="nogive">No</a>
+                    </div>
+                </div>
+
+                <div class="popup" id="giveup1">
+                    <div id="debugwinhead">
+
+                    </div>
+                    <p style="margin: 20px; color: red;">Are you <b>REALLY</b> sure you want to give up?</p>
+                    <p style="margin-left: 20px; margin-top: 20px; color: white;"></p>
+                    <div style="margin-left: 20px;">
+                        <a class="yesno" id="yesgive1">Yes</a>
+                        <a class="yesno" id="nogive1">No</a>
+                    </div>
+                </div>
+
+                <div class="popup" id="giveup2">
+                    <div id="debugwinhead">
+
+                    </div>
+                    <p style="margin: 20px; color: red;"><b>WHAT? I CAN'T HEAR YOU!</b></p>
+                    <p style="margin-left: 20px; margin-top: 20px; color: white;"></p>
+                    <div style="margin-left: 20px;">
+                        <a class="yesno" id="hellno">HELL NO!</a>
+                    </div>
+                </div>
+
+                <div class="popup" id="giveup3">
+                    <div id="debugwinhead">
+
+                    </div>
+                    <p style="margin: 20px; color: red;"><b>GET OUT THERE AND MAKE ME PROUD!</b></p>
+                    <p style="margin-left: 20px; margin-top: 20px; color: white;"></p>
+                    <div style="margin-left: 20px;">
+                        <a class="yesno" id="yessir">YES SIR!</a>
                     </div>
                 </div>
             </div>
@@ -103,7 +149,7 @@
 
                 setTimeout(function() {document.getElementById('debugwin').style.display = 'initial';}, 9000);
 
-                setTimeout(function() {document.getElementById('yes').style.backgroundColor = '#404F69'}, 11000);
+                setTimeout(function() {document.getElementById('yes').style.backgroundColor = '#404F69';}, 11000);
 
                 setTimeout(function() {
                     document.getElementById('yes').style.backgroundColor = '#222A38';
@@ -115,8 +161,31 @@
                     document.getElementById('yes').style.backgroundColor = '#404F69';
                 }, 13000);
 
-                setTimeout(function() {document.getElementById('yes').style.backgroundColor = '#738EBD'}, 14000);
+                setTimeout(function() {document.getElementById('yes').style.backgroundColor = '#738EBD';}, 15000);
 
+                setTimeout(function() {document.getElementById('giveup').style.display = 'initial';}, 16000);
+
+                setTimeout(function() {document.getElementById('yesgive').style.backgroundColor = '#404F69';}, 18000);
+
+                setTimeout(function() {document.getElementById('yesgive').style.backgroundColor = '#738EBD';}, 19000);
+
+                setTimeout(function() {document.getElementById('giveup1').style.display = 'initial';}, 20000);
+
+                setTimeout(function() {document.getElementById('nogive1').style.backgroundColor = '#404F69';}, 22000);
+
+                setTimeout(function() {document.getElementById('nogive1').style.backgroundColor = '#738EBD';}, 23000);
+
+                setTimeout(function() {document.getElementById('giveup2').style.display = 'initial';}, 24000);
+
+                setTimeout(function() {document.getElementById('hellno').style.backgroundColor = '#404F69';}, 25000);
+
+                setTimeout(function() {document.getElementById('hellno').style.backgroundColor = '#738EBD';}, 26000);
+
+                setTimeout(function() {document.getElementById('giveup3').style.display = 'initial';}, 27000);
+
+                setTimeout(function() {document.getElementById('yessir').style.backgroundColor = '#404F69';}, 28000);
+
+                setTimeout(function() {document.getElementById('yessir').style.backgroundColor = '#738EBD';}, 29000);
             };
                 
         </script>

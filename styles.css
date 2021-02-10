@@ -65,15 +65,38 @@ div.chromehead {
     text-align: right;
 }
 
-div#debugwin {
+div.popup {
     height: 200px;
     width: 200px;
     background-color: #222A38;
     position: absolute;
-    top: 200px;
-    left: 400px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.13);
     display: none;
+}
+
+div#debugwin {
+    top: 175px;
+    left: 400px;
+}
+
+div#giveup {
+    top: 200px;
+    left: 425px;
+}
+
+div#giveup1 {
+    top: 225px;
+    left: 450px;
+}
+
+div#giveup2 {
+    top: 250px;
+    left: 475px;
+}
+
+div#giveup3 {
+    top: 275px;
+    left: 500px;
 }
 
 div#debugwinhead {

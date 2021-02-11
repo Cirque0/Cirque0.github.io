@@ -11,7 +11,7 @@
     <body>
         <div class="bezel">
             <div class="screen">
-                <button onclick="typeWriter()" id="startbutton" class="startbutton">START CODING</button>
+                <button onclick="anima()" id="startbutton" class="startbutton">START CODING</button>
                 <div class="taskbar">
                     <img src="windowsicon.png" class="icon">
                     <img src="fileexplorericon.png" class="icon" style="width: 40px;">
@@ -47,12 +47,26 @@
                             };<br>
                         </p>
                     </div>
+
+                    <div id="codetyped" style="color: white; display: none;">
+                        <p>
+                            import Typed from 'typed.js';<br>
+                            <br>
+                            var typed = new Typed('#typed', {<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;stringsElement: "Are we live? Hello, world!",<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;typeSpeed: 2,<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;showCursor: true,<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;cursorChar: '|',<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;autoInserCss: true,<br>
+                            });<br>
+                        </p>
+                    </div>
                     <div style="margin-left: 5px;"><span id="typed" style="color: rgb(245, 244, 244);"></span></div>
                 </div>
 
-                <div class="chrome">
+                <div class="chrome" id="chrome">
                     <div class="chromehead">
-                        <p class="windowheader" style="margin-right: 1.7in;">Google Chrome - Stack Overflow</p>
+                        <p class="windowheader" style="margin-right: 3in;">Google Chrome</p>
                         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="white" class="bi bi-dash" viewBox="0 0 16 16">
                             <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
                         </svg>
@@ -66,10 +80,44 @@
 
                     <div id="google">
                         <img src="googlelogo.png" id="googlelogo">
+                        <div id="tosearch" style="display: none;"><p>HELP CODE DONT WORK</p></div>
                         <div id="searchbar">
-                            CODE DONT WORK
+                            <span id="typedsearch"></span>
                         </div>
                     </div>
+
+                    <div id="stackoverflow">
+                        <img src="sologo.png" id="sologo">
+                        <br>
+                        <h4 style="margin-left: 10px;">HELP CODE DONT WORK</h4>
+                        <p style="font-size: 14px; margin-left: 20px;">
+                            My code looks like this: <br> <br>
+                            function typeWriter() {<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;if (i < txt.length) {<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;document.getElementById("demo").innerHTML += txt.charAt(i);<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;i++;<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;setTimeout(typeWriter, speed);<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;};<br>
+                            };<br>
+                        </p>
+
+                        <h5 style="margin-left: 10px;">Answers</h5>
+                        <p style="font-size: 14px; margin-left: 20px;">
+                            Just use typed.js like this:<br>
+                            import Typed from 'typed.js'; <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;var typed = new Typed('#typed', { <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;string: 'Lorem ipsum blabla hello world' <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;}); <br>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="popup" id="success">
+                    <div id="debugwinhead">
+                        <p class="windowheader" style="margin-left: 5px;">Debug</p>
+                    </div>
+                    <p style="margin: 20px; color: green;">99/99 tests successful.</p>
+                    <p style="margin-left: 20px; margin-top: 20px; color: white;"> Fin.</p>
                 </div>
 
                 <div class="popup" id="debugwin">
@@ -132,7 +180,9 @@
             </div>
         </div>
         <script>
-            $('document').ready(anima());
+            /*$('document').ready(function() {document.getElementById('startbutton').style.display = 'initial';});*/
+
+            $('document').ready(anima())
 
             function anima() {
                 document.getElementById('startbutton').style.display = 'none';
@@ -177,15 +227,55 @@
 
                 setTimeout(function() {document.getElementById('giveup2').style.display = 'initial';}, 24000);
 
-                setTimeout(function() {document.getElementById('hellno').style.backgroundColor = '#404F69';}, 25000);
+                setTimeout(function() {document.getElementById('hellno').style.backgroundColor = '#738EBD';}, 25000);
 
-                setTimeout(function() {document.getElementById('hellno').style.backgroundColor = '#738EBD';}, 26000);
+                setTimeout(function() {document.getElementById('giveup3').style.display = 'initial';}, 26000);
 
-                setTimeout(function() {document.getElementById('giveup3').style.display = 'initial';}, 27000);
+                setTimeout(function() {document.getElementById('yessir').style.backgroundColor = '#738EBD';}, 27000);
 
-                setTimeout(function() {document.getElementById('yessir').style.backgroundColor = '#404F69';}, 28000);
+                setTimeout(function() {
+                    document.getElementById('debugwin').style.display = 'none';
+                    document.getElementById('giveup').style.display = 'none';
+                    document.getElementById('giveup1').style.display = 'none';
+                    document.getElementById('giveup2').style.display = 'none';
+                    document.getElementById('giveup3').style.display = 'none';
+                }, 28000);
 
-                setTimeout(function() {document.getElementById('yessir').style.backgroundColor = '#738EBD';}, 29000);
+                setTimeout(function() {document.getElementById('chrome').style.display = 'initial';}, 28500);
+
+                var searchoptions = {
+                    stringsElement: "#tosearch",
+                    typeSpeed: 32,
+                    showCursor: true,
+                    cursorChar: '|',
+                    autoInserCss: true,
+                }
+
+                setTimeout(function() {var searchtyped = new Typed('#typedsearch', searchoptions);}, 29000);
+
+                setTimeout(function() {
+                    document.getElementById('google').style.display = 'none';;
+                    document.getElementById('stackoverflow').style.display = 'initial';
+                }, 31500);
+
+                setTimeout(function() {document.getElementById('typed').style.backgroundColor = 'blue';},32500);
+
+                setTimeout(function() {
+                    document.getElementById('typed').innerHTML = '';
+                    document.getElementById('typed').style.backgroundColor = '#222A38';
+                }, 33000);
+
+                var correctopt = {
+                    stringsElement: "#codetyped",
+                    typeSpeed: 2,
+                    showCursor: true,
+                    cursorChar: '|',
+                    autoInserCss: true,
+                }
+
+                setTimeout(function() {var correctcode = new Typed('#typed', correctopt);}, 33500);
+
+                setTimeout(function() {document.getElementById('success').style.display = 'initial';}, 40000);
             };
                 
         </script>

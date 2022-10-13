@@ -4,9 +4,58 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>My CD Collection</title>
 </head>
 <body>
-    
+    <h2>My CD Collection:</h2>
+
+    <button type="button" onclick="loadXMLDoc()">
+    Get my CD collection</button>
+
+    <table id="demo">
+        <tr>
+          <th>Title</th>
+          <th>Artist</th>
+          <th>Country</th>
+          <th>Company</th>
+          <th>Price</th>
+          <th>Year</th>
+        </tr>
+    </table>
+
+    <script>
+        //Function that will load the XML document
+        function loadXMLDoc() { 
+            var xmlhttp = new XMLHttpRequest();
+            //Set a function that will execute when the file is successfully loaded
+            xmlhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    loadTable(this); 
+                }
+            };
+            //Send a request for the XML file, parameters: (method, uri, async)
+            xmlhttp.open("GET", "https://cirque0.github.io/catalog.xml", true);
+            xmlhttp.send();
+        }
+
+        //Function that will load the XML values into a table
+        function loadTable(xml) {
+            var x, i, j, xmlDoc, txt;
+            xmlDoc = xml.responseXML;
+            txt = "";
+            x = xmlDoc.getElementsByTagName("CD");
+            console.log(x);
+            for (i = 0; i < x.length; i++) {
+                const tableRow = document.createElement("tr");
+                for (j = 0; j < x[i].children.length; j++) {
+                    let element = document.createElement("td");
+                    element.innerHTML = x[i].children[j].childNodes[0].nodeValue;
+                    console.log(element.innerHTML);
+                    tableRow.appendChild(element);
+                }
+                document.getElementById("demo").append(tableRow);
+            }
+        }
+    </script>
 </body>
 </html>
